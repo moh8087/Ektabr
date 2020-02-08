@@ -1,0 +1,49 @@
+<?php # Script 16.1 - header.html
+// This page begins the HTML header for the site.
+
+// Start output buffering:
+ob_start();
+
+// Initialize a session:
+session_start();
+
+// Check for a $page_title value:
+if (!isset($page_title)) {
+	$page_title = 'User Registration';
+}
+?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><?php echo $page_title; ?></title>
+	
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header">
+	<div id="menu" class="container">
+		<ul>
+			<li class="current_page_item"><a href="index.php" accesskey="1" title="">الرئيسية</a></li>
+			<li><a href="#" accesskey="2" title="">أختبر</a></li>
+			<li><a href="#" accesskey="3" title="">من نحن</a></li>
+			<li><a href="#" accesskey="4" title="">التعليمات</a></li>
+			<li><a href="#" accesskey="5" title="">اتصل بنا</a></li>
+		</ul>
+	</div>
+</div>
+<div id="logo" class="container">
+	<h1><a href="index.php" class="icon icon-tasks"><span> اختبر </span></a></h1>
+	<h3> الاختبارات الإلكترونية بطريقة ميسرة <h3>
+</div>
+
+

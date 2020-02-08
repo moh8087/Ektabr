@@ -1,0 +1,159 @@
+
+@font-face {
+	font-family: "GE_SS_Two_Medium";
+        src: url("fonts/GE_SS_Two_Medium.eot"); /* IE 9 للإصدار التاسع من متصفح الإكسبلورر */
+    	src: url("fonts/GE_SS_Two_Medium.eot?") format("eot"), /* IE 6-8 من الإصدار السادس حتى الثامن من متصفح الإسكبلورر */
+             url("fonts/GE_SS_Two_Medium.otf") format("opentype"), /* Other browsers للمتصفحات الأخرى */
+    	     url("fonts/GE_SS_Two_Medium.ttf") format("truetype"); /* Safari, Android, iOS للمتصفحات الهواتف وبقية المتصفحات الحديثة */
+}
+
+body {
+	margin:0px;
+	padding:0px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	color:#333;
+	background-color:white;
+	}
+	
+h1 {
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font:0.8em GE_SS_Two_Medium, sans-serif;
+	font-size:28px;
+	line-height:28px;
+	font-weight:900;
+	color:#ccc;
+	}
+	
+p {
+	font:20px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 16px 0px;
+	padding:0px;
+	}
+	
+#Content>p {margin:0px; text-indent:30px;}
+
+a {
+	color:#09c;
+	font-size:20px;
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+	
+a:link {color:#09c;}
+
+a:visited {color:#07a;}
+
+a:hover {background-color:#eee;}
+
+#Header {
+	font-size:24px;
+	margin:50px 0px 10px 0px;
+	padding:17px 0px 0px 20px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:33px; /* 14px + 17px + 2px = 33px */
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+	line-height:11px;
+	background-color:#eee;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:14px; /* the correct height */
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:14px;}
+
+#Content {
+	margin:0px 210px 50px 10px;
+	padding:10px;
+	}
+
+#Menu {
+	position:absolute;
+	top:100px;
+	right:20px;
+	width:172px;
+	padding:10px;
+	background-color:#eee;
+	border:1px dashed #999;
+	line-height:30px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:150px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#Menu {width:150px;}
+
+.error {
+	color:#FF0033;
+	font-size:14px;
+	}
+
+#login-form
+{
+	margin-top:70px;
+}
+table
+{
+	border:solid #dcdcdc 1px;
+	padding:25px;
+	box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+}
+table tr,td
+{
+	padding:15px;
+	//border:solid #e1e1e1 1px;
+}
+table tr td input
+{
+	width:97%;
+	height:45px;
+	border:solid #e1e1e1 1px;
+	border-radius:3px;
+	padding-left:10px;
+	font-family:verdana, arial, helvetica, sans-serif;
+	font-size:18px;
+	background:#f9f9f9;
+	transition-duration:0.5s;
+	box-shadow: inset 0px 0px 1px rgba(0,0,0,0.4);
+}
+
+table tr td button
+{
+	width:100%;
+	height:45px;
+	border:0px;
+	background:rgba(12,45,78,11);
+	background:-moz-linear-gradient(top, #595959 , #515151);
+	border-radius:3px;
+	box-shadow: 1px 1px 1px rgba(1,0,0,0.2);
+	color:#f9f9f9;
+	font-family:GE_SS_Two_Medium, sans-serif;
+	font-size:18px;
+	font-weight:bolder;
+	text-transform:uppercase;
+}
+table tr td button:active
+{
+	position:relative;
+	top:1px;
+}
+table tr td a
+{
+	text-decoration:none;
+	color:#00a2d1;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+}

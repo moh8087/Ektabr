@@ -1,0 +1,23 @@
+if ($result) { // If it ran OK, display the records.
+// Table header.
+echo '<table>
+<tr><td><b>Edit</b></td>
+<td><b>Delete</b></td>
+<td><b>Last Name</b></td>
+<td><b>First Name</b></td>
+<td><b>Email</b></td>
+<td><b>Date Registered</b></td>
+</tr>';
+// Fetch and print the records:
+while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+echo '<tr>
+<td><a href="edit_record.php?id=' . $row['user_id'] . '">Edit</a></td>
+<td><a href="delete_record.php?id=' . $row['user_id'] . '">Delete</a></td>
+<td>' . $row['lname'] . '</td>
+<td>' . $row['fname'] . '</td>
+<td>' . $row['email'] . '</td>
+<td>' . $row['regdat'] . '</td>
+</tr>';
+}
+echo '</table>'; // Close the table
+mysqli_free_result ($result); // Free up the resources

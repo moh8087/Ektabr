@@ -1,0 +1,33 @@
+<?php # Script 16.1 - header.html
+// This page begins the HTML header for the site.
+
+// Start output buffering:
+ob_start();
+
+// Initialize a session:
+session_start();
+
+// Check for a $page_title value:
+if (!isset($page_title)) {
+	$page_title = 'اختبر';
+}
+?>
+
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title><?php echo $page_title; ?></title>
+
+
+
+</head>
+<body class="homepage">
+		

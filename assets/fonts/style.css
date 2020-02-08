@@ -1,0 +1,12 @@
+@font-face {
+   font-family: 'DroidSansArabic';
+   src: url('DroidSansArabic/font.ttf');
+}
+@font-face {
+   font-family: 'KohinoorArabic-Bold';
+   src: url('KohinoorArabic-Bold/font.ttf');
+}
+@font-face {
+   font-family: 'KohinoorArabic-Regular';
+   src: url('KohinoorArabic-Regular/font.ttf');
+}
